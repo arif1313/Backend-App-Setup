@@ -165,22 +165,25 @@ Now you have a fully functional Express server running with TypeScript!
 
 ```json
 {
-  "configs": [
-    {
-      "files": ["**/*.{js,mjs,cjs,ts,mts,cts}"],
-      "plugins": {
-        "js": "@eslint/js"
-      },
-      "extends": ["js/recommended"]
-    },
-    {
-      "files": ["**/*.{js,mjs,cjs,ts,mts,cts}"],
-      "languageOptions": {
-        "globals": "browser"
-      }
-    },
-    "typescript-eslint/recommended"
-  ]
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "overrides": [],
+  "rules": {}
 }
+
 ```
 
