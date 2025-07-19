@@ -162,3 +162,24 @@ To handle different types of data from clients:
 ---
 
 Now you have a fully functional Express server running with TypeScript!
+
+
+{
+  "configs": [
+    {
+      "files": ["**/*.{js,mjs,cjs,ts,mts,cts}"],
+      "plugins": {
+        "js": "@eslint/js"
+      },
+      "extends": ["js/recommended"]
+    },
+    {
+      "files": ["**/*.{js,mjs,cjs,ts,mts,cts}"],
+      "languageOptions": {
+        "globals": "browser"
+      }
+    },
+    "typescript-eslint/recommended"
+  ]
+}
+
