@@ -163,7 +163,7 @@ To handle different types of data from clients:
 
 Now you have a fully functional Express server running with TypeScript!
 
-
+```json
 {
   "configs": [
     {
@@ -182,4 +182,5 @@ Now you have a fully functional Express server running with TypeScript!
     "typescript-eslint/recommended"
   ]
 }
+```
 
